@@ -70,6 +70,7 @@
         <meta name="text:Instagram Widget UserID" content="">
         <meta name="text:Instagram Widget Feed Count" content="6">
         <meta name="if:Twitter Widget" content="0">
+        <meta name="if:Instagram Widget" content="0">
         <meta name="text:Twitter Widget Title" content="Latest Tweets">
         <meta name="text:Twitter Widget Feed Count" content="2">
         <meta name="text:Twitter Link" content="">
@@ -467,14 +468,14 @@
                         <div class="social-icons">
                             <ul>
 
-                                {block:IfInstagramWidgetUserID}
+                                {block:IfInstagramWidget}
                                                             <li><a class="widget-toggle instagram-toggle"><i class="fa fa-tw fa-instagram"></i></a></li>
-                                {/block:IfInstagramWidgetUserID}
-                                {block:IfNotInstagramWidgetUserID}
+                                {/block:IfInstagramWidget}
+                                {block:IfNotInstagramWidget}
                                     {block:IfInstagramLink}
                                         <li><a target="_blank" href="{text:Instagram Link}"><i class="fa fa-tw fa-instagram"></i></a></li>
                                     {/block:IfInstagramLink}
-                                {/block:IfNotInstagramWidgetUserID}
+                                {/block:IfNotInstagramWidget}
                            
                                 {block:IfTwitterWidget}
                                     <li><a class="widget-toggle twitter-toggle"><i class="fa fa-tw fa-twitter"></i></a></li>
@@ -510,7 +511,7 @@
                                 <div class="instagram image-widget widget">
                                     <div class="widget-title cl">
                                         {block:IfInstagramLink}
-                                            <a class="social-follow" href="http://instagram.com/{text:Instagram Username}" target="_blank">
+                                            <a class="social-follow" href="{text:Instagram Link}" target="_blank">
                                                 Instagram
                                             </a>
                                         {/block:IfInstagramLink}
@@ -531,17 +532,6 @@
                                 </div>
                             {/block:Twitter} 
     
-    
-                            {block:IfFlickrWidget}
-                                <div class="flickr image-widget widget">
-                                <div class="widget-title cl">
-                                    <a class="social-follow" href="{text:Flickr Link}" target="_blank">
-                                        Flickr
-                                    </a>
-                                </div>
-                                    <ul class="flickr-feed social-widget"></ul>
-                                </div>
-                            {/block:IfFlickrWidget}
     
                         </div>
                     {/block:IfSocialLinksWidget}
@@ -788,27 +778,27 @@
                           {/block:PermalinkPage}
                           
                         {/block:Date}
-        
-        
-                </div> 
-                </article>
+            
+            
+                    </div> 
+                    </article>
             
         
-        
-                {block:PermalinkPage}
-                    {block:PermalinkPagination}
-                        {block:IfPostPagePagination}
-                            <div class="post-pagination">
-                                {block:PreviousPost}
-                                    <a class="prev-post" href="{PreviousPost}"><i class="fa fa-chevron-left"></i> Previous</a>
-                                {/block:PreviousPost}
-                                {block:NextPost}
-                                    <a class="next-post" href="{PreviousPost}">Next <i class="fa fa-chevron-right"></i></a>
-                                {/block:NextPost}
-                            </div>
-                        {/block:IfPostPagePagination}
-                    {/block:PermalinkPagination}
-                {/block:PermalinkPage}
+            
+                    {block:PermalinkPage}
+                        {block:PermalinkPagination}
+                            {block:IfPostPagePagination}
+                                <div class="post-pagination">
+                                    {block:PreviousPost}
+                                        <a class="prev-post" href="{PreviousPost}"><i class="fa fa-chevron-left"></i> Previous</a>
+                                    {/block:PreviousPost}
+                                    {block:NextPost}
+                                        <a class="next-post" href="{PreviousPost}">Next <i class="fa fa-chevron-right"></i></a>
+                                    {/block:NextPost}
+                                </div>
+                            {/block:IfPostPagePagination}
+                        {/block:PermalinkPagination}
+                    {/block:PermalinkPage}
         
         
                 {/block:Posts}
