@@ -680,19 +680,22 @@
                         {block:Photoset}
                             <article id="{PostID}" class="{block:IndexPage}post modal post-photoset pp{/block:IndexPage}" data-id="{PostID}"  data-notes="{PostNotesURL}" data-pt="photoset">
                             <div class="inner">
-                            <div class="media">
-                            <div class="inner">
-                                <div class="ps-nav-left">{PhotoHeight-HighRes}</div>
-                                <div class="ps-nav-right">{PhotoHeight-HighRes}</div>
-                                <div class="photoset-count"><span>1</span> / {PhotoCount}</div>
-                                <div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">
-                                    {block:Photos}
-                                        <a class="single-photoset" rel="{PostID}" href="{PhotoURL-HighRes}">
-                                            <img alt="{PhotoAlt}" src="{PhotoURL-HighRes}" data-adaptive-background>
-                                        </a>
-                                    {/block:Photos}
+                                <div class="media">
+                                    <div class="inner">
+                                    <div class="fuse-photoset ips">
+                                        <div class="ps-nav-left"></div>
+                                        <div class="ps-nav-right"></div>
+                                        <div class="photoset-count" data-id="{PostID}"><span>1</span> / {PhotoCount}</div>
+                                        <div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">
+                                            {block:Photos}
+                                                <a class="single-photoset" href="{PhotoURL-HighRes}">
+                                                    <img alt="{PhotoAlt}" src="{PhotoURL-HighRes}">
+                                                </a>
+                                            {/block:Photos}
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
-                               </div>
                               </div>
         
                         {/block:Photoset}
