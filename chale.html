@@ -682,18 +682,10 @@
                             <div class="inner">
                                 <div class="media">
                                     <div class="inner">
-                                    <div class="fuse-photoset ips">
-                                        <div class="ps-nav-left"></div>
-                                        <div class="ps-nav-right"></div>
-                                        <div class="photoset-count" data-id="{PostID}"><span>1</span> / {PhotoCount}</div>
-                                        <div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">
-                                            {block:Photos}
-                                                <a class="single-photoset" href="{PhotoURL-HighRes}">
-                                                    <img alt="{PhotoAlt}" src="{PhotoURL-HighRes}">
-                                                </a>
-                                            {/block:Photos}
-                                        </div>
-                                    </div>
+                                        {block:Photos}
+
+                                                <img alt="{PhotoAlt}" src="{PhotoURL-HighRes}">
+                                        {/block:Photos}
                                     </div>
                                 </div>
                               </div>
